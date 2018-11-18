@@ -266,7 +266,7 @@
             document.getElementById('duration').innerHTML = control.getDuration();
         }
         
-        // ＜異常系イベント（hls_0.6.13.js）＞
+        // ＜異常系イベント（hls.js）＞
         function onHlsError(event, data) {
             var errorFatal   = data.fatal;
             var errorType    = data.type;
@@ -288,7 +288,7 @@
             if (errorFatal ||
                     errorType === Hls.ErrorTypes.NETWORK_ERROR &&
                     errorDetails === Hls.ErrorDetails.FRAG_LOAD_ERROR) {
-                // プレイヤー初期化（hls_0.6.13.js）
+                // プレイヤー初期化（hls.js）
                 hlsPlayer.destroy();
                 
                 switch(errorType) {
